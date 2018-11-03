@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class GameCanvas extends JPanel {
     public GameObject background;
     public GameObject player;
+    public GameObject enemy;
     public static ArrayList<PlayerBullet> bullets;
     public static ArrayList<Enemy> enemies;
     public static ArrayList<EnemyBullet> enemyBullets;
@@ -21,6 +22,7 @@ public class GameCanvas extends JPanel {
     public GameCanvas() {
         this.background = new Background();
         this.player = new Player();
+        this.enemy = new Enemy();
         this.bullets = new ArrayList<>();
         this.enemies = new ArrayList<>();
         this.enemyBullets = new ArrayList<>();
@@ -30,6 +32,7 @@ public class GameCanvas extends JPanel {
     protected void paintComponent(Graphics g) {
         this.background.render(g);
         this.player.render(g);
+        this.enemy.render(g);
         for(PlayerBullet bullet : bullets){
             bullet.render(g);
         }
@@ -57,6 +60,7 @@ public class GameCanvas extends JPanel {
     private void runAll() {
         this.background.run();
         this.player.run();
+        this.enemy.run();
         for (PlayerBullet bullet : bullets) {
             bullet.run();
         }
