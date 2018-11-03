@@ -1,11 +1,13 @@
 package base;
 
+import base.renderer.Renderer;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class GameObject {
-    public BufferedImage image;
     public Vector2D position;
+    public Renderer renderer;
 
     //phương thức
     public GameObject() {
@@ -19,8 +21,9 @@ public class GameObject {
 
     //hiển thị
     public void render(Graphics g) {
-        g.drawImage(this.image, (int)this.position.x, (int)this.position.y, null);
-
+        if (this.renderer != null) {
+            this.renderer.render(g, this);
+        }
     }
 
 }

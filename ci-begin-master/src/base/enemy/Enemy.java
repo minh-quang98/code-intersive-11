@@ -2,12 +2,16 @@ package base.enemy;
 
 import base.GameObject;
 import base.game.GameCanvas;
+import base.renderer.SIngleImagaeRenderer;
 import tklibs.SpriteUtils;
+
+import java.awt.image.BufferedImage;
 
 public class Enemy extends GameObject {
     public Enemy() {
         super();
-        this.image = SpriteUtils.loadImage("E:\\CI 11\\ci-begin-master\\assets\\images\\enemies\\level0\\blue\\0.png");
+        BufferedImage image = SpriteUtils.loadImage("E:\\CI 11\\ci-begin-master\\assets\\images\\enemies\\level0\\blue\\0.png");
+        this.renderer = new SIngleImagaeRenderer(image);
         this.position.set(50,50);
     }
 
@@ -16,7 +20,7 @@ public class Enemy extends GameObject {
     public void run() {
 //        super.run();
         if (this.position.y < 300){
-            this.position.addThis(0,3);
+            this.position.addThis(1,1);
         }
         this.fire();
     }
