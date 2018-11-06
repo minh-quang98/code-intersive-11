@@ -11,22 +11,24 @@ import java.util.ArrayList;
 public class PlayerBullet extends GameObject {
     public PlayerBullet() {
         super();
-//        BufferedImage image = SpriteUtils.loadImage("E:\\CI 11\\ci-begin-master\\assets\\images\\player-bullets\\a\\0.png");
-//        this.renderer = new SIngleImagaeRenderer(image);
         this.creatRenderer();
     }
 
     private void creatRenderer() {
-        ArrayList<BufferedImage> images = new ArrayList<>();
-        images.add(SpriteUtils.loadImage("E:\\CI 11\\ci-begin-master\\assets\\images\\player-bullets\\a\\0.png"));
-        images.add(SpriteUtils.loadImage("E:\\CI 11\\ci-begin-master\\assets\\images\\player-bullets\\a\\1.png"));
-        images.add(SpriteUtils.loadImage("E:\\CI 11\\ci-begin-master\\assets\\images\\player-bullets\\a\\2.png"));
-        images.add(SpriteUtils.loadImage("E:\\CI 11\\ci-begin-master\\assets\\images\\player-bullets\\a\\3.png"));
+        ArrayList<BufferedImage> images = SpriteUtils.loadImages(
+                "E:\\CI 11\\ci-begin-master\\assets\\images\\player-bullets\\a\\0.png",
+                "E:\\CI 11\\ci-begin-master\\assets\\images\\player-bullets\\a\\1.png",
+                "E:\\CI 11\\ci-begin-master\\assets\\images\\player-bullets\\a\\2.png",
+                "E:\\CI 11\\ci-begin-master\\assets\\images\\player-bullets\\a\\3.png"
+        );
         this.renderer = new AnimationRenderer(images);
     }
 
     @Override
     public void run() {
-        this.position.subtractThis(0, 3);
+        this.position.subtractThis(0, 5);
+        if (this.position.y < -20) {
+            this.destroy();
+        }
     }
 }

@@ -1,5 +1,6 @@
 package base.enemy;
 
+import base.FrameCounter;
 import base.GameObject;
 import base.game.GameCanvas;
 import base.renderer.AnimationRenderer;
@@ -10,20 +11,21 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 public class Enemy extends GameObject {
+    FrameCounter firecounter;
     public Enemy() {
         super();
-//        BufferedImage image = SpriteUtils.loadImage("E:\\CI 11\\ci-begin-master\\assets\\images\\enemies\\level0\\blue\\0.png");
-//        this.renderer = new SIngleImagaeRenderer(image);
         this.creatRenderer();
         this.position.set(50,50);
+        this.firecounter = new FrameCounter(20);
     }
 
     private void creatRenderer() {
-        ArrayList<BufferedImage> images = new ArrayList<>();
-        images.add(SpriteUtils.loadImage("E:\\CI 11\\ci-begin-master\\assets\\images\\enemies\\level0\\blue\\0.png"));
-        images.add(SpriteUtils.loadImage("E:\\CI 11\\ci-begin-master\\assets\\images\\enemies\\level0\\blue\\1.png"));
-        images.add(SpriteUtils.loadImage("E:\\CI 11\\ci-begin-master\\assets\\images\\enemies\\level0\\blue\\2.png"));
-        images.add(SpriteUtils.loadImage("E:\\CI 11\\ci-begin-master\\assets\\images\\enemies\\level0\\blue\\3.png"));
+        ArrayList<BufferedImage> images = SpriteUtils.loadImages(
+                "E:\\CI 11\\ci-begin-master\\assets\\images\\enemies\\level0\\pink\\0.png",
+                "E:\\CI 11\\ci-begin-master\\assets\\images\\enemies\\level0\\pink\\1.png",
+                "E:\\CI 11\\ci-begin-master\\assets\\images\\enemies\\level0\\pink\\2.png",
+                "E:\\CI 11\\ci-begin-master\\assets\\images\\enemies\\level0\\pink\\3.png"
+        );
         this.renderer = new AnimationRenderer(images);
     }
 
@@ -37,14 +39,12 @@ public class Enemy extends GameObject {
         this.fire();
     }
 
-    int count = 0;
     private void fire() {
-        if (count >= 20) {
-            EnemyBullet enemyBullet = new EnemyBullet();
-            enemyBullet.position.set(this.position.x, this.position.y);
-            GameCanvas.enemyBullets.add(enemyBullet);
-        } else {
-            count ++;
+        if (this.firecounter.run()) {
+            EnemyBullet enemyBullet = GameObject.recycle(EnemyBullet.class);
+            enemyBullet.position.set(this.position);
+            this.firecounter.reset();
         }
     }
+
 }
