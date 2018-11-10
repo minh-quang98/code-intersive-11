@@ -57,8 +57,8 @@ public class Vector2D {
     }
 
     public Vector2D scaleThis(float rate) {
-        this.x *= x;
-        this.y *= y;
+        this.x *= rate;
+        this.y *= rate;
         return this;
     }
 
@@ -76,9 +76,9 @@ public class Vector2D {
         return this.set(other.x, other.y);
     }
 
-    public Vector2D setLenght(float lenght) {
-        float currentlenght = this.length();
-        this.scaleThis(lenght / currentlenght);
+    public Vector2D setLength(float length) {
+        float currentlength = this.length();
+        this.scaleThis(length / currentlength);
         return this;
     }
 }

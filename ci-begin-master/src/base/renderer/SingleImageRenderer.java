@@ -5,10 +5,10 @@ import base.GameObject;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class SIngleImagaeRenderer extends Renderer{
+public class SingleImageRenderer extends Renderer{
     BufferedImage image;
 
-    public SIngleImagaeRenderer(BufferedImage image) {
+    public SingleImageRenderer(BufferedImage image) {
         this.image = image;
     }
 

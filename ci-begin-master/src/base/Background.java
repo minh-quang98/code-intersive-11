@@ -1,7 +1,7 @@
 package base;
 
 import base.game.Settings;
-import base.renderer.SIngleImagaeRenderer;
+import base.renderer.SingleImageRenderer;
 import tklibs.SpriteUtils;
 
 import java.awt.image.BufferedImage;
@@ -11,14 +11,16 @@ public class Background extends GameObject {
         super();
         BufferedImage image = SpriteUtils.loadImage(
                 "E:\\CI 11\\ci-begin-master\\assets\\images\\background\\0.png");
-        this.renderer = new SIngleImagaeRenderer(image);
+        this.renderer = new SingleImageRenderer(image);
         this.position.set(0, Settings.SCREEN_HEIGHT - image.getHeight());
+        this.velocity.set(0, 10);
     }
 
     @Override
     public void run() {
-        if (this.position.y <= 0) {
-            this.position.addThis(0, 10);
+        super.run();
+        if (this.position.y >= 0) {
+            this.velocity.set(0, 0);
         }
     }
 }

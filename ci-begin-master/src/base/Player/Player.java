@@ -1,12 +1,9 @@
 package base.Player;
 
 import base.FrameCounter;
-import base.game.GameCanvas;
 import base.GameObject;
 import base.KeyEventPress;
-import base.game.Settings;
 import base.renderer.AnimationRenderer;
-import base.renderer.SIngleImagaeRenderer;
 import tklibs.SpriteUtils;
 
 import java.awt.image.BufferedImage;
@@ -37,36 +34,52 @@ public class Player extends GameObject {
 
     @Override
     public void run() {
-        if (KeyEventPress.isUpPress) {
-            if (this.position.y > 0) {
-                this.position.subtractThis(0, 5);
-            }
-        }
-        if (KeyEventPress.isDownPress) {
-//            if (this.position.y < Settings.SCREEN_HEIGHT - this.image.getHeight() * 2) {
-                this.position.addThis(0,5);
-//            }
-        }
-        if (KeyEventPress.isLeftPress) {
-            if (this.position.x > 0) {
-                this.position.subtractThis(5, 0);
-            }
-        }
-        if (KeyEventPress.isRightPress) {
-//            if (this.position.x < Settings.SCREEN_WIDTH - 416 - this.image.getWidth()) {
-                this.position.addThis(5, 0);
-//            }
-        }
-        if (KeyEventPress.isFirePress) {
+        super.run();
+        this.move();
+        if (this.firecounter.run() && KeyEventPress.isFirePress) {
             this.fire();
         }
     }
 
-    private void fire() {
-        if (this.firecounter.run()) {
-            PlayerBullet bullet = GameObject.recycle(PlayerBullet.class);
-            bullet.position.set(this.position);
-            this.firecounter.reset();
+    private void move() {
+        //TODO upgrade
+        int vx = 0;
+        int vy = 0;
+        if (KeyEventPress.isUpPress) {
+            if (this.position.y > 0) {
+                vy -= 5;
+            }
         }
+        if (KeyEventPress.isDownPress) {
+//            if (this.position.y < Settings.SCREEN_HEIGHT - this.image.getHeight() * 2) {
+                vy += 5;
+//            }
+        }
+        if (KeyEventPress.isLeftPress) {
+            if (this.position.x > 0) {
+                vx -= 5;
+            }
+        }
+        if (KeyEventPress.isRightPress) {
+//            if (this.position.x < Settings.SCREEN_WIDTH - 416 - this.image.getWidth()) {
+                vx += 5;
+//            }
+        }
+        this.velocity.set(vx, vy);
+
+    }
+
+    private void fire() {
+            PlayerBullet bullet = GameObject.recycle(PlayerBulletType1.class);
+            bullet.position.set(this.position);
+
+            PlayerBulletType2 bullet2 = GameObject.recycle(PlayerBulletType2.class);
+            bullet2.position.set(this.position.add(-25, 0));
+            bullet2.velocity.set(-5, -5);
+
+            PlayerBulletType2 bullet3 = GameObject.recycle(PlayerBulletType2.class);
+            bullet3.position.set(this.position.add(25,0));
+            this.firecounter.reset();
+            bullet3.velocity.set(5, -5);
     }
 }

@@ -2,9 +2,7 @@ package base.enemy;
 
 import base.FrameCounter;
 import base.GameObject;
-import base.game.GameCanvas;
 import base.renderer.AnimationRenderer;
-import base.renderer.SIngleImagaeRenderer;
 import tklibs.SpriteUtils;
 
 import java.awt.image.BufferedImage;
@@ -16,6 +14,7 @@ public class Enemy extends GameObject {
         super();
         this.creatRenderer();
         this.position.set(50,50);
+        this.velocity.set(0, 3);
         this.firecounter = new FrameCounter(20);
     }
 
@@ -32,9 +31,9 @@ public class Enemy extends GameObject {
 
     @Override
     public void run() {
-//        super.run();
-        if (this.position.y < 300){
-            this.position.addThis(1,1);
+        super.run();
+        if (this.position.y > 300) {
+            this.velocity.set(0, 0);
         }
         this.fire();
     }
