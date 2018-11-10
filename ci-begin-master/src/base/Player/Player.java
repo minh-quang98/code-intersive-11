@@ -34,11 +34,11 @@ public class Player extends GameObject {
 
     @Override
     public void run() {
-        super.run();
         this.move();
         if (this.firecounter.run() && KeyEventPress.isFirePress) {
             this.fire();
         }
+        super.run();
     }
 
     private void move() {
