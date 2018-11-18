@@ -1,6 +1,8 @@
 package base;
 
 import base.Player.Player;
+import base.physics.BoxCollider;
+import base.physics.Physics;
 import base.renderer.Renderer;
 
 import java.awt.*;
@@ -39,10 +41,31 @@ public class GameObject {
         return newGameOfject;
     }
 
+    /**
+     * tra ve 1 gameObject cos kieu clazz(E) intersect voi game object truyeenf vaof
+     * @param clazz
+     * @param <E>
+     * @return
+     */
+    public static <E extends GameObject> E intersects(Class<E> clazz, BoxCollider boxCollider) {
+        //gameobjects > result(result instanceof E, result instanceof Phusics,
+        // result.getBoxCollider.intersects(boxCollider))
+        int size = gameObjects.size();
+        for(int i = 0; i < size; i++) {
+            GameObject gameObject = gameObjects.get(i);
+            if (gameObject.isActive
+                    && gameObject.getClass().isAssignableFrom(clazz)
+                    && gameObject instanceof Physics) {
+                Physics gameObjectPhysics = (Physics)gameObject;
+                if (gameObjectPhysics.getBoxcollider().intersects(boxCollider)) {
+                    return (E)gameObject;
+                }
+            }
+        }
+        return null;
+    }
+
     private static boolean isValidRecycle(GameObject gameObject, Class clazz) {
-        //TODO
-        // isActive == false
-        //gameObject ~ instance of clazz
         return !gameObject.isActive
                 && gameObject.getClass().isAssignableFrom(clazz);
     }
