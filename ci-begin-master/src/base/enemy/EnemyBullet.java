@@ -12,6 +12,7 @@ import java.awt.image.BufferedImage;
 
 public class EnemyBullet extends GameObject implements Physics {
     BoxCollider boxCollider;
+    int count = 0;
     public EnemyBullet() {
         super();
         BufferedImage image = SpriteUtils.loadImage("E:\\CI 11\\ci-begin-master\\assets\\images\\enemies\\bullets\\blue.png");
@@ -29,10 +30,17 @@ public class EnemyBullet extends GameObject implements Physics {
 
     private void hitPlayer() {
         Player player = GameObject.intersects(Player.class, this.boxCollider);
-        if (player != null) {
-            player.destroy();
-            this.destroy();
+        if (this.count < 3) {
+            if (player != null) {
+                count++;
+                this.destroy();
+            } else {
+                player.destroy();
+                this.destroy();
+            }
         }
+
+
     }
 
     private void destroyIfNeed() {
