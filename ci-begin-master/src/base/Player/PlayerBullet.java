@@ -13,10 +13,13 @@ import java.util.ArrayList;
 
 public class PlayerBullet extends GameObject implements Physics {
     BoxCollider boxCollider;
+    int damage;
+
     public PlayerBullet() {
         super();
         this.velocity.set(0, -5);
         this.boxCollider = new BoxCollider(this.position, 24, 24);
+        this.damage = 1;
     }
 
     @Override
@@ -29,7 +32,7 @@ public class PlayerBullet extends GameObject implements Physics {
     private void hitEnemy() {
         Enemy enemy = GameObject.intersects(Enemy.class, this.boxCollider);
         if (enemy != null) {
-            enemy.destroy();
+            enemy.takeDamage(this.damage);
             this.destroy();
         }
     }

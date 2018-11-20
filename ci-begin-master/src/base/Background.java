@@ -14,6 +14,7 @@ public class Background extends GameObject {
         this.renderer = new SingleImageRenderer(image);
         this.position.set(0, Settings.SCREEN_HEIGHT - image.getHeight());
         this.velocity.set(0, 10);
+        this.anchor.set(0,0);
     }
 
     @Override

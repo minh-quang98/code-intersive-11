@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae02a900-4da7-47c7-a684-a08fd37ad305" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ci-begin-master/src/base/enemy/EnemyExplosion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ci-begin-master/src/base/physics/BoxCollider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ci-begin-master/src/base/physics/Physics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ci-begin-master/src/base/enemy/EnemySummoner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ci-begin-master/src/base/renderer/BoxRenderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ci-begin-master/src/base/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/ci-begin-master/src/base/Background.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ci-begin-master/src/base/FrameCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ci-begin-master/src/base/FrameCounter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci-begin-master/src/base/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/ci-begin-master/src/base/GameObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci-begin-master/src/base/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/ci-begin-master/src/base/Player/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci-begin-master/src/base/Player/PlayerBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ci-begin-master/src/base/Player/PlayerBullet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ci-begin-master/src/base/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/ci-begin-master/src/base/Rectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci-begin-master/src/base/enemy/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/ci-begin-master/src/base/enemy/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci-begin-master/src/base/enemy/EnemyBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ci-begin-master/src/base/enemy/EnemyBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ci-begin-master/src/base/game/GameCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/ci-begin-master/src/base/game/GameCanvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci-begin-master/src/base/renderer/AnimationRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ci-begin-master/src/base/renderer/AnimationRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ci-begin-master/src/base/renderer/SingleImageRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ci-begin-master/src/base/renderer/SingleImageRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ci-begin-master/base/Background.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ci-begin-master/base/Background.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ci-begin-master/base/GameObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ci-begin-master/base/GameObject.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ci-begin-master/base/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ci-begin-master/base/Player/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ci-begin-master/base/Player/PlayerBullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ci-begin-master/base/Player/PlayerBullet.class" afterDir="false" />
@@ -30,41 +33,41 @@
     <session id="1241052159">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="2" />
-          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.11" value="5" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="129" />
+          <entry key="java" value="151" />
           <entry key="png" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="6" />
-          <entry key="JAVA" value="129" />
+          <entry key="JAVA" value="151" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="12264" />
-          <entry key="txt" value="39" />
+          <entry key="java" value="13517" />
+          <entry key="txt" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12264" />
-          <entry key="PLAIN_TEXT" value="39" />
+          <entry key="JAVA" value="13517" />
+          <entry key="PLAIN_TEXT" value="40" />
         </counts>
       </usages-collector>
     </session>
@@ -72,14 +75,14 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/renderer/AnimationRenderer.java">
+        <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/enemy/EnemySummoner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="42" column="13" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="42" selection-end-column="13" />
+            <state relative-caret-position="193">
+              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#414#415#0" expanded="true" />
-                <element signature="e#433#434#0" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
+                <element signature="e#373#374#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/enemy/Enemy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="56" column="46" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+            <state relative-caret-position="2031">
+              <caret line="104" column="32" selection-start-line="104" selection-start-column="32" selection-end-line="104" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,13 +100,36 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/enemy/EnemyExplosion.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/physics/Physics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="26" column="61" lean-forward="true" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
+            <state relative-caret-position="75">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/physics/BoxCollider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-175">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/GameObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="59" column="43" lean-forward="true" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2717#2718#0" expanded="true" />
+                <element signature="e#2753#2754#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,6 +149,8 @@
     <findStrings>
       <find>render</find>
       <find>creatRen</find>
+      <find>take</find>
+      <find>takeDama</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -143,13 +171,9 @@
         <option value="$PROJECT_DIR$/ci-begin-master/src/base/GameCanvas.java" />
         <option value="$PROJECT_DIR$/ci-begin-master/src/base/renderer/Renderer.java" />
         <option value="$PROJECT_DIR$/ci-begin-master/src/tklibs/AudioUtils.java" />
-        <option value="$PROJECT_DIR$/ci-begin-master/src/base/FrameCounter.java" />
         <option value="$PROJECT_DIR$/ci-begin-master/src/tklibs/SpriteUtils.java" />
-        <option value="$PROJECT_DIR$/ci-begin-master/src/base/game/GameCanvas.java" />
         <option value="$PROJECT_DIR$/ci-begin-master/src/base/renderer/SIngleImagaeRenderer.java" />
         <option value="$PROJECT_DIR$/ci-begin-master/src/base/renderer/SIngleImageRenderer.java" />
-        <option value="$PROJECT_DIR$/ci-begin-master/src/base/renderer/SingleImageRenderer.java" />
-        <option value="$PROJECT_DIR$/ci-begin-master/src/base/Background.java" />
         <option value="$PROJECT_DIR$/ci-begin-master/src/base/Vector2D.java" />
         <option value="$PROJECT_DIR$/ci-begin-master/src/base/game/Settings.java" />
         <option value="$PROJECT_DIR$/ci-begin-master/src/base/Player/PlayerBulletType2.java" />
@@ -157,13 +181,19 @@
         <option value="$PROJECT_DIR$/ci-begin-master/src/base/Rectangle.java" />
         <option value="$PROJECT_DIR$/ci-begin-master/src/base/physics/Physics.java" />
         <option value="$PROJECT_DIR$/ci-begin-master/src/base/physics/BoxCollider.java" />
-        <option value="$PROJECT_DIR$/ci-begin-master/src/base/GameObject.java" />
-        <option value="$PROJECT_DIR$/ci-begin-master/src/base/Player/PlayerBullet.java" />
-        <option value="$PROJECT_DIR$/ci-begin-master/src/base/Player/Player.java" />
-        <option value="$PROJECT_DIR$/ci-begin-master/src/base/enemy/EnemyBullet.java" />
-        <option value="$PROJECT_DIR$/ci-begin-master/src/base/enemy/Enemy.java" />
-        <option value="$PROJECT_DIR$/ci-begin-master/src/base/renderer/AnimationRenderer.java" />
         <option value="$PROJECT_DIR$/ci-begin-master/src/base/enemy/EnemyExplosion.java" />
+        <option value="$PROJECT_DIR$/ci-begin-master/src/base/Player/Player.java" />
+        <option value="$PROJECT_DIR$/ci-begin-master/src/base/Player/PlayerBullet.java" />
+        <option value="$PROJECT_DIR$/ci-begin-master/src/base/FrameCounter.java" />
+        <option value="$PROJECT_DIR$/ci-begin-master/src/base/GameObject.java" />
+        <option value="$PROJECT_DIR$/ci-begin-master/src/base/renderer/SingleImageRenderer.java" />
+        <option value="$PROJECT_DIR$/ci-begin-master/src/base/Background.java" />
+        <option value="$PROJECT_DIR$/ci-begin-master/src/base/renderer/AnimationRenderer.java" />
+        <option value="$PROJECT_DIR$/ci-begin-master/src/base/renderer/BoxRenderer.java" />
+        <option value="$PROJECT_DIR$/ci-begin-master/src/base/enemy/EnemyBullet.java" />
+        <option value="$PROJECT_DIR$/ci-begin-master/src/base/game/GameCanvas.java" />
+        <option value="$PROJECT_DIR$/ci-begin-master/src/base/enemy/EnemySummoner.java" />
+        <option value="$PROJECT_DIR$/ci-begin-master/src/base/enemy/Enemy.java" />
       </list>
     </option>
   </component>
@@ -187,6 +217,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,17 +249,43 @@
               <item name="base" type="462c0819:PsiDirectoryNode" />
               <item name="enemy" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CI 11" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci-begin-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CI 11" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci-begin-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="physics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CI 11" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci-begin-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="Player" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CI 11" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ci-begin-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="renderer" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542120383630" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/CI 11" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542723606071" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -361,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541861455856</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="13/11/2018 21:50">
+      <created>1542536832068</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1542536832068</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -375,8 +440,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18704453" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19676113" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -385,11 +451,11 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32890365" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4979757" weight="0.32890365" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4979757" visible="true" weight="0.32890365" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986711" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32890365" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.34053156" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32890365" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5020243" side_tool="true" weight="0.32890365" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32890365" />
@@ -425,7 +491,8 @@
     <MESSAGE value="10/11/2018 21:16" />
     <MESSAGE value="10/11/2018 21:40" />
     <MESSAGE value="10/11/2018 21:50" />
-    <option name="LAST_COMMIT_MESSAGE" value="10/11/2018 21:50" />
+    <MESSAGE value="13/11/2018 21:50" />
+    <option name="LAST_COMMIT_MESSAGE" value="13/11/2018 21:50" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -489,9 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="800">
           <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -502,38 +566,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/FrameCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="107" column="13" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/game/GameCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/Background.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -548,10 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-          <folding>
-            <element signature="e#102#103#0" expanded="true" />
-            <element signature="e#127#128#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -562,13 +594,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/renderer/SingleImageRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -590,23 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/physics/BoxCollider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="33" column="10" lean-forward="true" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/physics/Physics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="49" lean-forward="true" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/Player/PlayerBulletType2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -619,45 +627,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ci-begin-master/assets/images/players/straight/0.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/Player/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1681">
-          <caret line="93" column="1" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2947#2948#0" expanded="true" />
-            <element signature="e#2974#2975#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/Player/PlayerBullet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-          <folding>
-            <element signature="e#1130#1131#0" expanded="true" />
-            <element signature="e#1169#1170#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2316#2317#0" expanded="true" />
-            <element signature="e#2353#2354#0" expanded="true" />
-            <element signature="e#2380#2381#0" expanded="true" />
-            <element signature="e#2416#2417#0" expanded="true" />
-            <element signature="e#2453#2454#0" expanded="true" />
-            <element signature="e#2500#2501#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/reflect/Constructor.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -673,43 +642,138 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/enemy/EnemyExplosion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="26" column="61" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/FrameCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/Player/PlayerBullet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/Player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/Background.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/renderer/AnimationRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="38" column="56" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/renderer/SingleImageRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="84" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="17" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/enemy/EnemyBullet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="16" column="123" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="123" />
+        <state relative-caret-position="-350">
+          <caret line="23" column="75" selection-start-line="23" selection-start-column="75" selection-end-line="23" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/enemy/EnemySummoner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
           <folding>
-            <element signature="e#1134#1135#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/game/GameCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/renderer/BoxRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/enemy/Enemy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="56" column="46" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+        <state relative-caret-position="2031">
+          <caret line="104" column="32" selection-start-line="104" selection-start-column="32" selection-end-line="104" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/renderer/AnimationRenderer.java">
+    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="42" column="13" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="42" selection-end-column="13" />
+        <state relative-caret-position="118">
+          <caret line="59" column="43" lean-forward="true" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#2717#2718#0" expanded="true" />
+            <element signature="e#2753#2754#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/enemy/EnemyExplosion.java">
+    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/physics/Physics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="26" column="61" lean-forward="true" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
+        <state relative-caret-position="75">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci-begin-master/src/base/physics/BoxCollider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-175">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

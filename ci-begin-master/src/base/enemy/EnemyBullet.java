@@ -5,19 +5,23 @@ import base.Player.Player;
 import base.game.Settings;
 import base.physics.BoxCollider;
 import base.physics.Physics;
+import base.renderer.BoxRenderer;
 import base.renderer.SingleImageRenderer;
 import tklibs.SpriteUtils;
 
+import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class EnemyBullet extends GameObject implements Physics {
     BoxCollider boxCollider;
+
     public EnemyBullet() {
         super();
-        BufferedImage image = SpriteUtils.loadImage("E:\\CI 11\\ci-begin-master\\assets\\images\\enemies\\bullets\\blue.png");
-        this.renderer = new SingleImageRenderer(image);
+//        BufferedImage image = SpriteUtils.loadImage("E:\\CI 11\\ci-begin-master\\assets\\images\\enemies\\bullets\\blue.png");
+//        this.renderer = new SingleImageRenderer(image);
         this.velocity.set(0, 5);
         this.boxCollider = new BoxCollider(this.position, 16, 16);
+        this.renderer = new BoxRenderer(this.boxCollider, Color.green, true); // == null
     }
 
     @Override

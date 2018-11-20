@@ -46,7 +46,6 @@ public class Player extends GameObject implements Physics {
     }
 
     private void move() {
-        //TODO upgrade
         int vx = 0;
         int vy = 0;
         if (KeyEventPress.isUpPress) {

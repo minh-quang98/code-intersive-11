@@ -6,6 +6,7 @@ import base.Player.Player;
 import base.Player.PlayerBullet;
 import base.enemy.Enemy;
 import base.enemy.EnemyBullet;
+import base.enemy.EnemySummoner;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,11 +15,13 @@ import java.util.ArrayList;
 public class GameCanvas extends JPanel {
     public GameObject background;
     public GameObject player;
+    public EnemySummoner enemySummoner;
 
     public GameCanvas() {
         this.background = GameObject.recycle(Background.class); // new Background
         this.player = GameObject.recycle(Player.class);
-        Enemy enemy = GameObject.recycle(Enemy.class);
+//        Enemy enemy = GameObject.recycle(Enemy.class);
+        this.enemySummoner = GameObject.recycle(EnemySummoner.class);
     }
 
     public void gameLoop() {

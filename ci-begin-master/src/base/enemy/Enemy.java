@@ -7,12 +7,17 @@ import base.physics.Physics;
 import base.renderer.AnimationRenderer;
 import tklibs.SpriteUtils;
 
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 public class Enemy extends GameObject implements Physics {
     BoxCollider boxCollider;
     FrameCounter firecounter;
+    int hp;
+    boolean immune;
+    FrameCounter immuneCounter;
+
     public Enemy() {
         super();
         this.creatRenderer();
@@ -20,6 +25,9 @@ public class Enemy extends GameObject implements Physics {
         this.velocity.set(0, 3);
         this.firecounter = new FrameCounter(20);
         this.boxCollider = new BoxCollider(this.position, 28, 28);
+        this.hp = 3;
+        this.immune = false;
+        this.immuneCounter = new FrameCounter(60);
     }
 
     private void creatRenderer() {
@@ -50,6 +58,20 @@ public class Enemy extends GameObject implements Physics {
         }
     }
 
+    public void takeDamage(int damage) {
+        if (this.immune) {
+            return;
+        }
+        this.hp -= damage;
+        if (this.hp <= 0) {
+            this.hp = 0;
+            this.destroy();
+        } else {
+            this.immune = true;
+            this.immuneCounter.reset();
+        }
+    }
+
     @Override
     public void destroy() {
         super.destroy();
@@ -60,5 +82,29 @@ public class Enemy extends GameObject implements Physics {
     @Override
     public BoxCollider getBoxcollider() {
         return this.boxCollider;
+    }
+
+    @Override
+    public void render(Graphics g) {
+        if (this.immune) {
+            //TODO
+            if (this.immuneCounter.run()) {
+                this.immune = false;
+            }
+            if(this.immuneCounter.count % 4 == 0) {
+                super.render(g);
+            }
+        } else {
+            super.render(g);
+        }
+    }
+
+    @Override
+    public void reset() {
+        super.reset();
+        this.velocity.set(0, 3);
+        this.immune = false;
+        this. immuneCounter.reset();
+        this.hp = 3;
     }
 }
