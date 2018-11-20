@@ -87,6 +87,13 @@ public class Player extends GameObject implements Physics {
     }
 
     @Override
+    public void destroy() {
+        super.destroy();
+        PlayerExplosion playerExplosion = GameObject.recycle(PlayerExplosion.class);
+        playerExplosion.position.set(this.position);
+    }
+
+    @Override
     public BoxCollider getBoxcollider() {
         return this.boxCollider;
     }
