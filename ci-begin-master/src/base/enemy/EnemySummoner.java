@@ -15,7 +15,7 @@ public class EnemySummoner extends GameObject implements Physics {
         this.boxCollider = new BoxCollider(this.position, 40, 100);
         this.renderer = new BoxRenderer(this.boxCollider, Color.white, true);
         this.position.set(20,100);
-        this.summonCounter = new FrameCounter(30);
+        this.summonCounter = new FrameCounter(60);
     }
 
     @Override

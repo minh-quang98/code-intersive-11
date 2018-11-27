@@ -81,4 +81,26 @@ public class Vector2D {
         this.scaleThis(length / currentlength);
         return this;
     }
+
+    public Vector2D setAngle(double angle) {
+        double lenght = this.length();
+        this.x = (float)(lenght * Math.sin(angle));
+        this.y = (float)(lenght * Math.cos(angle));
+        return this;
+    }
+
+    public double getAngle() {
+        return Math.atan(this.y / this.x);
+    }
+
+    public static void main(String[] args) {
+        Vector2D test = new Vector2D(0,1);
+        test.setAngle(Math.PI);
+        Vector2D test2 = new Vector2D(0,-1);
+        System.out.println(test.getAngle());
+        System.out.println(test2.getAngle());
+
+
+    }
 }
+

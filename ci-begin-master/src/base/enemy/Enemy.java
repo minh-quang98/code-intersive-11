@@ -2,6 +2,9 @@ package base.enemy;
 
 import base.FrameCounter;
 import base.GameObject;
+import base.action.Action;
+import base.action.ActionParallel;
+import base.game.Settings;
 import base.physics.BoxCollider;
 import base.physics.Physics;
 import base.renderer.AnimationRenderer;
@@ -17,6 +20,7 @@ public class Enemy extends GameObject implements Physics {
     int hp;
     boolean immune;
     FrameCounter immuneCounter;
+    Action action;
 
     public Enemy() {
         super();
@@ -28,6 +32,40 @@ public class Enemy extends GameObject implements Physics {
         this.hp = 3;
         this.immune = false;
         this.immuneCounter = new FrameCounter(60);
+        this.action = this.createAction();
+    }
+
+    private Action createAction() {
+        Action actionRun = new Action() {
+            @Override
+            public boolean run(GameObject master) {
+                master.velocity.set(1, 0);
+                if (master.position.x > Settings.SCREEN_WIDTH * 3/4) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            @Override
+            public void reset() {
+            }
+        };
+        Action actionFire = new Action() {
+            @Override
+            public boolean run(GameObject master) {
+                Enemy enemy = (Enemy) master;
+                enemy.fire();
+                return false;
+            }
+
+            @Override
+            public void reset() {
+                firecounter.reset();
+            }
+        };
+        Action actionParallel = new ActionParallel(actionRun, actionFire);
+        return actionParallel;
     }
 
     private void creatRenderer() {
@@ -44,10 +82,11 @@ public class Enemy extends GameObject implements Physics {
     @Override
     public void run() {
         super.run();
-        if (this.position.y > 300) {
-            this.velocity.set(0, 0);
-        }
-        this.fire();
+//        if (this.position.y > 300) {
+//            this.velocity.set(0, 0);
+//        }
+//        this.fire();
+        this.action.run(this);
     }
 
     private void fire() {
@@ -87,7 +126,7 @@ public class Enemy extends GameObject implements Physics {
     @Override
     public void render(Graphics g) {
         if (this.immune) {
-            //TODO
+
             if (this.immuneCounter.run()) {
                 this.immune = false;
             }
