@@ -51,7 +51,8 @@ public class GameCanvas extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         g.fillRect(0,0,Settings.SCREEN_WIDTH, Settings.SCREEN_HEIGHT);
-        for (GameObject gameObject : GameObject.gameObjects) {
+        for (int i = 0; i < GameObject.gameObjects.size(); i++) {
+            GameObject gameObject = GameObject.gameObjects.get(i);
             if (gameObject.isActive) {
                 gameObject.render(g);
             }

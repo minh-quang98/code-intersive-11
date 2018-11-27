@@ -15,14 +15,14 @@ public class PlayerExplosion extends GameObject {
 
     private void createAnimation() {
         ArrayList<BufferedImage> images = SpriteUtils.loadImages(
-                "C:\\Users\\User\\Desktop\\CI 11\\ci-begin-master\\assets\\images\\players\\explosions\\0.png",
-                "C:\\Users\\User\\Desktop\\CI 11\\ci-begin-master\\assets\\images\\players\\explosions\\1.png",
-                "C:\\Users\\User\\Desktop\\CI 11\\ci-begin-master\\assets\\images\\players\\explosions\\2.png",
-                "C:\\Users\\User\\Desktop\\CI 11\\ci-begin-master\\assets\\images\\players\\explosions\\3.png",
-                "C:\\Users\\User\\Desktop\\CI 11\\ci-begin-master\\assets\\images\\players\\explosions\\4.png",
-                "C:\\Users\\User\\Desktop\\CI 11\\ci-begin-master\\assets\\images\\players\\explosions\\5.png",
-                "C:\\Users\\User\\Desktop\\CI 11\\ci-begin-master\\assets\\images\\players\\explosions\\6.png",
-                "C:\\Users\\User\\Desktop\\CI 11\\ci-begin-master\\assets\\images\\players\\explosions\\7.png"
+                "assets/images/players/explosions/0.png",
+                "assets/images/players/explosions/1.png",
+                "assets/images/players/explosions/2.png",
+                "assets/images/players/explosions/3.png",
+                "assets/images/players/explosions/5.png",
+                "assets/images/players/explosions/6.png",
+                "assets/images/players/explosions/7.png"
+
         );
         this.renderer = new AnimationRenderer(images,5,true);
     }

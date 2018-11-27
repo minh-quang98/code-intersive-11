@@ -36,7 +36,7 @@ public class AnimationRenderer extends Renderer {
         int x = (int)(master.position.x - master.anchor.x * currentImage.getWidth());
         int y = (int)(master.position.y - master.anchor.y * currentImage.getHeight());
 
-        g.drawImage(this.images.get(currentImageIndex), x, y, null);
+        g.drawImage(currentImage, x, y, null);
 
         if (this.nextImageCounter.run()) {
             this.currentImageIndex++;
